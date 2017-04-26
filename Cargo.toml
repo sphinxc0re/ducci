@@ -1,6 +1,6 @@
 [package]
 name = "ducci"
-version = "1.0.0"
+version = "1.1.0"
 authors = ["Julian Laubstein <contact@julianlaubstein.de>"]
 description = "A library for creating Ducci sequences from n-tuples"
 repository = "https://github.com/sphinxc0re/ducci"

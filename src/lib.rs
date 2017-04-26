@@ -21,7 +21,7 @@
 pub type Tuple = Vec<i64>;
 
 pub fn create_ducci_sequence(entry_sequence: Tuple) -> Vec<Tuple> {
-    if !is_power_of_two(entry_sequence.len()) {
+    if !entry_sequence.len().is_power_of_two() {
         return Vec::new();
     }
 
@@ -63,10 +63,6 @@ fn create_following_ducci(tuple: Tuple) -> Tuple {
 
 fn sub_abs(a: i64, b: i64) -> i64 {
     (a - b).abs()
-}
-
-fn is_power_of_two(number: usize) -> bool {
-    (number != 0) && ((number & (number - 1)) == 0)
 }
 
 #[cfg(test)]
@@ -118,19 +114,5 @@ mod tests {
         let res = sub_abs(a, b);
 
         assert_eq!(res, 44);
-    }
-
-    #[test]
-    fn test_is_power_of_two() {
-        let powers = vec![1, 2, 4, 8, 16, 32];
-        let non_powers = vec![0, 3, 5, 7, 12, 34, 53];
-
-        for power in powers {
-            assert!(is_power_of_two(power));
-        }
-
-        for non_power in non_powers {
-            assert!(!is_power_of_two(non_power));
-        }
     }
 }
