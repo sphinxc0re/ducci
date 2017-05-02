@@ -41,7 +41,7 @@ pub fn create_ducci_sequence(entry_sequence: Tuple) -> Vec<Tuple> {
     res_vector
 }
 
-fn create_following_ducci(tuple: Tuple) -> Tuple {
+pub fn create_following_ducci(tuple: Tuple) -> Tuple {
     let mut result = Vec::new();
 
     let mut index = 0;
